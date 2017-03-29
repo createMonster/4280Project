@@ -1,3 +1,7 @@
+import org.json.*;
+import java.io.*;
+import java.util.*;
+
 public class Customer {
 
 	private String id;
@@ -19,7 +23,10 @@ public class Customer {
 		this.email = email;	
 		this.bonusPoint = 0;
 		this.tickets = new ArrayList<Tickets>();
-		throw new UnsupportedOperationException();
+		JSONObject obj = new JSONObject("{\}");
+		DBManager DBm = DBManager.getInstance();
+		String SQLName = "NEWCUSTOMER";
+		DBm.executeSQLStatement(DBm.getSQLStatement(SQLName), obj);
 	}
 	
 	public Customer(String id){

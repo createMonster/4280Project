@@ -13,6 +13,7 @@ public class SQLManager {
 	 * @param name
 	 * @param statemanet
 	 */
+	
 	public void setSQL(String name, Statement statemanet) {
 		// TODO - implement SQLManager.setSQL
 		throw new UnsupportedOperationException();
