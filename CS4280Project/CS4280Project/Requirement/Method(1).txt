@@ -1,0 +1,44 @@
+Customer:
+
+Ticket[] tickets
+String id
+String pwd
+String bonusPoint// when buy tickets costumer will get some points
+Customer(String id, String pwd)
+String getId()
+String getpwd()
+String getBonusPoint()
+void setId()
+void setPwd()
+void bookTicket(Ticket ticket)
+Ticket[] getTicket()
+void cancelTicket(Ticket ticket)
+void changeDate(Ticket ticket)
+void changeDestination(Ticket ticket)
+void changeDeparture(Ticket ticket)
+boolean useBonusPoint()//customer can use points to get a discount
+
+
+Company:
+
+Flight[] flights
+//Ticket[] tickets
+//tickets should be included in the flight?
+String name
+String pwd
+Company(String name, String pwd)
+String getName()
+String getPwd()
+Flight[] getFlight()
+Ticket[] getTicket()
+void addFlight(Flight flight)
+void cancelFlight(Flight flight)
+void approveBooking(Ticket ticket)
+void rejectBooking(Ticket ticket)
+void viewStatus()
+void viewStatus(Flight flight)
+void setPrice(Flight flight)
+void setPrice(Ticket ticket)
+double getDiscount(Flight flight)
+
+

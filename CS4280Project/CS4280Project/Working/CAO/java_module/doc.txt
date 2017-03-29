@@ -1,0 +1,16 @@
+Customer.java:
+1. add Customer(String id)
+
+2. a method called checkCustomer() to be added.
+
+3. bonusPoint change to int
+
+4. Comment queryTicket()
+
+5. What is getCustomerFromID()?
+
+6. Add fields and methods according to the database.
+
+
+Ticket.java:
+1. 

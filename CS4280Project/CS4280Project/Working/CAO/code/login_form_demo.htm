@@ -1,0 +1,90 @@
+<!-- File: login_form.htm -->
+<!-- Desc: provide a login form for system authenication -->
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=Big5">
+<title>Login form (Invoking Servlet)</title>
+
+<script language="JavaScript">
+function datacheck()
+{
+	if(thisForm.user_id.value == "")
+	{
+		window.alert("Please input the correct User ID"); 
+		document.thisForm.user_id.focus();
+		return ;
+	}
+
+	if(thisForm.user_pwd.value == "")
+	{
+		window.alert("Please input the correct Password");
+		document.thisForm.user_pwd.focus();
+		return ;
+	}
+
+	thisForm.submit();
+}
+</script>
+</head>
+
+<body onload="document.thisForm.user_id.focus()">
+<form action="loginServlet" enctype="x-www-form-encoded" method="post" name="thisForm">
+<br><br><br><br><br>
+<table width="61%" bordercolor="#CCCCCC" border="0" bgcolor="#CCCCCC" align="center">
+
+<tbody><tr bgcolor="#336699"> 
+<td colspan="2"><div align="center">
+<font size="3" face="Arial, Helvetica, sans-serif" color="#FFFFFF"><b> 
+A Simple Login Form (Invoking Servlet)</b></font></div></td>
+</tr>
+
+<tr bgcolor="#CCCCCC"><td colspan="2"><div align="center"><br></div></td></tr>
+
+<tr bgcolor="#CCCCCC">
+<td colspan="2"><div align="center">
+<font size="2" face="Arial, Helvetica, sans-serif" color="#336699"><b>
+Please enter your User ID and password </b></font></div></td>
+</tr>
+
+<tr bgcolor="#CCCCCC"><td colspan="2"><div align="center"><br></div></td></tr>
+
+<tr bgcolor="#CCCCCC"><td colspan="2"><table width="45%" border="0" align="center">
+<tbody><tr><td width="40%"><div align="center">
+<font size="2" face="Arial, Helvetica, sans-serif" color="#336699"><b>
+User ID: </b></font> </div></td>
+<td width="60%"> <input name="user_id" size="12" maxlength="8" type="text"></td>
+</tr>
+<tr> 
+<td><div align="center"><font size="2" face="Arial, Helvetica, sans-serif" color="#336699"><b>
+Password: </b></font> </div></td>
+<td><input name="user_pwd" size="12" maxlength="8" type="password"> </td>
+</tr>
+</tbody></table></td></tr>
+
+<tr bgcolor="#CCCCCC"><td colspan="2">&nbsp;</td></tr>
+
+<tr bgcolor="#CCCCCC">
+<td width="50%">
+
+<div align="center">
+<a href="javascript:datacheck()">
+<img src="Login%20form%20%28Invoking%20Servlet%29_files/login.gif" name="submitButton" style="cursor:hand" onmouseover='thisForm.submitButton.src="login_on.gif"' onmouseout='thisForm.submitButton.src="login.gif"' width="100" height="18" border="0"></a>
+</div></td>
+
+<td width="50%">
+<div align="center">
+<a href="javascript:document.thisForm.reset()">
+<img src="Login%20form%20%28Invoking%20Servlet%29_files/clear.gif" name="clearButton" style="cursor:hand" onmouseover='thisForm.clearButton.src="clear_on.gif"' onmouseout='thisForm.clearButton.src="clear.gif"' width="100" height="18" border="0"></a>
+</div>
+</td>
+</tr>
+</tbody></table>
+<br><br>
+<table width="61%" border="0" align="center">
+<tbody><tr><td>
+<input name="supportCookie" value="blockCookie" type="checkbox">Please click here if your web browser does not support cookie
+</td></tr>
+</tbody></table>
+</form>
+
+
+</body></html>
